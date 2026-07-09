@@ -1,0 +1,139 @@
+<script lang="ts">
+	import { ArrowLeft, BarChart3, Leaf, Droplet, Flame, Calendar, Camera, Home, Settings } from 'lucide-svelte';
+</script>
+
+<div class="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans antialiased">
+	
+	<div class="bg-white border-b border-slate-100 px-4 py-4 pt-12 flex items-center sticky top-0 z-50">
+		<a href="/" class="p-2 text-slate-700 hover:text-[#2A664E] transition active:scale-95">
+			<ArrowLeft class="w-5 h-5" />
+		</a>
+	</div>
+
+	<div class="flex-1 overflow-y-auto pb-32 scrollbar-hide">
+		<div class="p-5 flex flex-col gap-4">
+			
+			<div class="pt-2 pb-1 px-1">
+				<h2 class="text-2xl font-black text-slate-800 tracking-tight">Impact Overview</h2>
+				<p class="text-xs text-slate-400 mt-1 font-medium">지구를 위해 내가 기여한 환경 보호 기록입니다.</p>
+			</div>
+
+			<div class="flex flex-col gap-3">
+				
+				<div class="bg-white p-5 rounded-[24px] border border-slate-100 shadow-[0_4px_12px_rgba(0,0,0,0.01)] flex items-center justify-between">
+					<div class="flex items-center space-x-3.5">
+						<div class="w-11 h-11 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 shrink-0">
+							<Leaf class="w-5 h-5" />
+						</div>
+						<div>
+							<h3 class="text-[11px] font-bold text-slate-400 tracking-wide uppercase">누적 탄소 절감량</h3>
+							<p class="text-base font-black text-slate-800 mt-0.5">12 kg CO2</p>
+						</div>
+					</div>
+					<span class="text-[11px] font-bold text-emerald-600 bg-emerald-50/60 px-3 py-1 rounded-full border border-emerald-100">소나무 2그루 효과</span>
+				</div>
+
+				<div class="bg-white p-5 rounded-[24px] border border-slate-100 shadow-[0_4px_12px_rgba(0,0,0,0.01)] flex items-center justify-between">
+					<div class="flex items-center space-x-3.5">
+						<div class="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center text-blue-500 shrink-0">
+							<Droplet class="w-5 h-5" />
+						</div>
+						<div>
+							<h3 class="text-[11px] font-bold text-slate-400 tracking-wide uppercase">분리배출한 페트병</h3>
+							<p class="text-base font-black text-slate-800 mt-0.5">48 Bottles</p>
+						</div>
+					</div>
+					<span class="text-[11px] font-bold text-blue-600 bg-blue-50/60 px-3 py-1 rounded-full border border-blue-100">재활용률 100%</span>
+				</div>
+
+				<div class="bg-white p-5 rounded-[24px] border border-slate-100 shadow-[0_4px_12px_rgba(0,0,0,0.01)] flex items-center justify-between">
+					<div class="flex items-center space-x-3.5">
+						<div class="w-11 h-11 bg-orange-50 rounded-xl flex items-center justify-center text-orange-500 shrink-0">
+							<Flame class="w-5 h-5" />
+						</div>
+						<div>
+							<h3 class="text-[11px] font-bold text-slate-400 tracking-wide uppercase">연속 미션 달성 일수</h3>
+							<p class="text-base font-black text-slate-800 mt-0.5">5 Day Streak</p>
+						</div>
+					</div>
+					<span class="text-[11px] font-bold text-slate-600 mr-1">지속 가능 상태 🔥</span>
+				</div>
+			</div>
+
+			<div class="bg-white p-5 rounded-[24px] border border-slate-100 shadow-[0_4px_12px_rgba(0,0,0,0.01)]">
+				<div class="flex items-center space-x-1.5 mb-5">
+					<BarChart3 class="w-4 h-4 text-[#2A664E]" />
+					<h4 class="text-sm font-bold text-slate-800 tracking-wide">요일별 세부 기여도</h4>
+				</div>
+				
+				<div class="h-44 w-full flex items-end justify-between px-2 pt-6 pb-2 bg-slate-50 rounded-2xl border border-slate-100/80">
+					<div class="flex flex-col items-center space-y-1.5 flex-1">
+						<span class="text-[9px] font-bold text-slate-400">15P</span>
+						<div class="w-3 bg-emerald-200 h-14 rounded-full"></div>
+						<span class="text-[10px] font-bold text-slate-400">Mon</span>
+					</div>
+					<div class="flex flex-col items-center space-y-1.5 flex-1">
+						<span class="text-[9px] font-bold text-slate-400">30P</span>
+						<div class="w-3 bg-emerald-200 h-24 rounded-full"></div>
+						<span class="text-[10px] font-bold text-slate-400">Tue</span>
+					</div>
+					<div class="flex flex-col items-center space-y-1.5 flex-1">
+						<span class="text-[9px] font-bold text-[#2A664E]">50P</span>
+						<div class="w-3 bg-[#2A664E] h-36 rounded-full"></div>
+						<span class="text-[10px] font-bold text-[#2A664E]">Wed</span>
+					</div>
+					<div class="flex flex-col items-center space-y-1.5 flex-1">
+						<span class="text-[9px] font-bold text-slate-400">10P</span>
+						<div class="w-3 bg-emerald-200 h-10 rounded-full"></div>
+						<span class="text-[10px] font-bold text-slate-400">Thu</span>
+					</div>
+					<div class="flex flex-col items-center space-y-1.5 flex-1">
+						<span class="text-[9px] font-bold text-slate-400">40P</span>
+						<div class="w-3 bg-emerald-200 h-28 rounded-full"></div>
+						<span class="text-[10px] font-bold text-slate-400">Fri</span>
+					</div>
+					<div class="flex flex-col items-center space-y-1.5 flex-1">
+						<span class="text-[9px] font-bold text-slate-400">5P</span>
+						<div class="w-3 bg-emerald-200 h-6 rounded-full"></div>
+						<span class="text-[10px] font-bold text-slate-400">Sat</span>
+					</div>
+				</div>
+				
+				<div class="mt-4 pt-3 border-t border-slate-100 flex justify-between items-center text-xs text-slate-400">
+					<div class="flex items-center space-x-1">
+						<Calendar class="w-3.5 h-3.5 text-slate-400" />
+						<span>최근 7일 기준 수집됨</span>
+					</div>
+					<span class="font-bold text-slate-700">총 150 포인트 획득</span>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-100 px-6 py-3 flex justify-around items-center z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.02)]">
+		<a href="/scanner" class="flex flex-col items-center space-y-0.5 text-slate-400 hover:text-[#2A664E] transition active:scale-95">
+			<Camera class="w-5 h-5" />
+			<span class="text-[10px] font-medium">Scan</span>
+		</a>
+		<a href="/" class="flex flex-col items-center space-y-0.5 text-slate-400 hover:text-[#2A664E] transition active:scale-95">
+			<Home class="w-5 h-5" />
+			<span class="text-[10px] font-medium">Home</span>
+		</a>
+		<a href="/settings" class="flex flex-col items-center space-y-0.5 text-slate-400 hover:text-[#2A664E] transition active:scale-95">
+			<Settings class="w-5 h-5" />
+			<span class="text-[10px] font-medium">Settings</span>
+		</a>
+	</div>
+</div>
+
+<style>
+	/* 스크롤바 숨김 처리 스타일 */
+	.scrollbar-hide::-webkit-scrollbar {
+		display: none;
+	}
+	.scrollbar-hide {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+</style>
