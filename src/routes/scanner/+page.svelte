@@ -4,7 +4,7 @@
 	import { goto } from '$app/navigation';
 
 	// 🔗여기에 네 티처블 머신 공유 링크를 넣어줘! (끝에 / 꼭 붙이기)
-	const MODEL_URL = "https://teachablemachine.withgoogle.com/models/P4iaATfw_/"; 
+	const MODEL_URL = "https://teachablemachine.withgoogle.com/models/E0j02AqMS/"; 
 
 	let videoElement: HTMLVideoElement | undefined = $state();
 	let isModelLoading = $state(true);
@@ -63,7 +63,7 @@
             setTimeout(() => {
                 predictLoop();
             }, 500);
-
+            
         } catch (error) {
         console.error("AI 로딩 최종 실패:", error);
         // 📍 폰에서 왜 에러가 났는지 눈으로 볼 수 있게 경고창 띄우기
