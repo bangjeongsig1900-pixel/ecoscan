@@ -1,0 +1,21 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: 'main'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # 📍 내 컴퓨터가 빌드한 'build' 폴더를 그대로 깃허브에 업로드해!
+          path: 'build'
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4

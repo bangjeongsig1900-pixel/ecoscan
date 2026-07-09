@@ -4,9 +4,8 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    // 📍 여기에 네 깃허브 저장소 이름을 슬래시 사이에 꼭 적어줘!
-    // 예: 저장소 이름이 eco-scan 이라면 base: '/eco-scan/',
-    base: '/네_깃허브_저장소_이름/', 
+    // 📍 네 진짜 깃허브 저장소 이름인 'ecoscan'으로 정확히 변경 완료!
+    base: '/ecoscan/', 
 
     plugins: [
         tailwindcss(),
